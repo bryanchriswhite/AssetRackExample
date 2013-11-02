@@ -9,6 +9,6 @@
     "express": "3.4.4",
     "jade": "*",
     "browserify": "~2.35.1",
-    "asset-rack": "https://github.com/shopbeam/asset-rack/tarball/angular-templates-asset"
+    "asset-rack": "https://github.com/shopbeam/asset-rack/tarball/master"
   }
 }
