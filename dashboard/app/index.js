@@ -1,17 +1,20 @@
-require('../../shared/lib/angular/angular.min.js');
 require('../../shared/app');
 require('../../shared/app/directives/lightbox');
 
-angular.module('widget', ['shared'])
+angular.module('dashboard', ['shared'])
   .config([
     '$routeProvider', function($routeProvider) {
       $routeProvider
-        .when('/one', {
-          templateUrl: 'view1.html',
+        .when('/foo', {
+          templateUrl: 'foo.html',
           controller : 'MainCtrl'
         })
-        .when('/two', {
-          templateUrl: 'view2.html',
+        .when('/bar', {
+          templateUrl: 'bar.html',
+          controller : 'MainCtrl'
+        })
+        .when('/baz', {
+          templateUrl: 'baz.html',
           controller : 'MainCtrl'
         })
     }

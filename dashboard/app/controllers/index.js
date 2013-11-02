@@ -1,4 +1,4 @@
-angular.module('widget')
+angular.module('myApp')
   .controller('MainCtrl', [
     '$scope',
     function($scope) {
