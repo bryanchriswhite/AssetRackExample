@@ -1,12 +1,14 @@
 {
-  "name": "application-name",
+  "name": "AssetRackExample",
   "version": "0.0.1",
-  "private": true,
+  "private": false,
   "scripts": {
     "start": "node app.js"
   },
   "dependencies": {
     "express": "3.4.4",
-    "jade": "*"
+    "jade": "*",
+    "browserify": "~2.35.1",
+    "asset-rack": "https://github.com/shopbeam/asset-rack/tarball/angular-templates-asset"
   }
 }
