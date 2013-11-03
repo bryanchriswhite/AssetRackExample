@@ -7,14 +7,20 @@ angular.module('widget', ['shared'])
     '$routeProvider', function($routeProvider) {
       $routeProvider
         .when('/one', {
-          templateUrl: 'view1.html',
+          templateUrl: '/view1.html',
           controller : 'MainCtrl'
         })
         .when('/two', {
-          templateUrl: 'view2.html',
+          templateUrl: '/view2.html',
           controller : 'MainCtrl'
+        })
+        .otherwise({
+          redirectTo: '/one'
         })
     }
   ])
-  .run(['$templateCache', angularTemplates]);
+  .run(['$templateCache', function($templateCache) {
+    widgetTemplates($templateCache);
+    sharedTemplates($templateCache);
+  }]);
 require('./controllers');

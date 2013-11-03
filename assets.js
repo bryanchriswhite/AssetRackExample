@@ -1,16 +1,19 @@
 var rack = require('asset-rack')
   , widgetTemplates = new rack.AngularTemplatesAsset({
-    url    : '/widget/templates.js',
-    dirname: __dirname + '/widget/app/views'
+    url           : '/widget/templates.js',
+    clientVariable: 'widgetTemplates',
+    dirname       : __dirname + '/widget/app/views'
   })
   , dashboardTemplates = new rack.AngularTemplatesAsset({
-    url    : '/dashboard/templates.js',
-    dirname: __dirname + '/dashboard/app/views',
+    url                 : '/dashboard/templates.js',
+    clientVariable      : 'dashboardTemplates',
+    dirname             : __dirname + '/dashboard/app/views',
     templateCacheDirname: '/dashboard/views'
   })
   , sharedTemplates = new rack.AngularTemplatesAsset({
-    url    : '/shared/templates.js',
-    dirname: __dirname + '/shared/app/views',
+    url                 : '/shared/templates.js',
+    clientVariable      : 'sharedTemplates',
+    dirname             : __dirname + '/shared/app/views',
     templateCacheDirname: '/shared/views'
   })
   , assets = new rack.Rack([

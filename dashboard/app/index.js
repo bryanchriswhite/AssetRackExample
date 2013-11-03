@@ -1,3 +1,4 @@
+require('../../shared/lib/angular/angular.min.js');
 require('../../shared/app');
 require('../../shared/app/directives/lightbox');
 
@@ -6,18 +7,26 @@ angular.module('dashboard', ['shared'])
     '$routeProvider', function($routeProvider) {
       $routeProvider
         .when('/foo', {
-          templateUrl: 'foo.html',
+          templateUrl: '/dashboard/views/foo.html',
           controller : 'MainCtrl'
         })
         .when('/bar', {
-          templateUrl: 'bar.html',
+          templateUrl: '/dashboard/views/bar.html',
           controller : 'MainCtrl'
         })
         .when('/baz', {
-          templateUrl: 'baz.html',
+          templateUrl: '/dashboard/views/baz.html',
           controller : 'MainCtrl'
+        })
+        .otherwise({
+          redirectTo: '/foo'
         })
     }
   ])
-  .run(['$templateCache', angularTemplates]);
+  .run([
+    '$templateCache', function($templateCache) {
+      dashboardTemplates($templateCache);
+      sharedTemplates($templateCache);
+    }
+  ]);
 require('./controllers');

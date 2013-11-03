@@ -1,4 +1,4 @@
-angular.module('myApp')
+angular.module('dashboard')
   .controller('MainCtrl', [
     '$scope',
     function($scope) {
