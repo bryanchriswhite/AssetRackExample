@@ -1,9 +1,9 @@
 AssetRackExample
 ================
+_NOTE: README is a WIP, doesn't yet explain usage of all three PRs_
 
-Examples of asset rack configurations to demonstrate PRs made on techpines/asset-rack
-_NOTE: The `node_modules` direcroty **is** under version control so no `npm install` should be necessary;
-however; if you do `npm install` npm-shrinkwrap should get the right dependency versions._
+Use case for PRs [#110](https://github.com/techpines/asset-rack/pull/110), [#109](https://github.com/techpines/asset-rack/pull/109), and 
+[#107](https://github.com/techpines/asset-rack/pull/107) of [asset-rack](https://github.com/techpines/asset-rack).
 
 ##The Rundown
 This example consist of an express backend, serving multiple angular front-ends.
